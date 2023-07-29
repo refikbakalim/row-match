@@ -11,16 +11,14 @@ public class LevelSelector : MonoBehaviour
 	public int move_count;
 	public string grid;
 	public int highscore;
-	[SerializeField] private SelectedLevelData data;
 	
 	public void OpenScene() {
-		Debug.Log("Opening level " + level_number);
-		data.level_number = level_number;
-		data.grid_width = grid_width;
-		data.grid_height = grid_height;
-		data.move_count = move_count;
-		data.grid = grid;
-		data.highscore = highscore;
+		StaticData.level_number = level_number;
+		StaticData.grid_width = grid_width;
+		StaticData.grid_height = grid_height;
+		StaticData.move_count = move_count;
+		StaticData.grid = grid;
+		StaticData.highscore = highscore;
 		SceneManager.LoadScene("GameScene");
 	}
 }
