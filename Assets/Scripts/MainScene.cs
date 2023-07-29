@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class MainScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public GameObject LevelsPopup;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-	public void onLevelsClick()
+	public void openLevelsPopup()
 	{
-		Debug.Log("Levels button has been clicked!");
+		if(!LevelsPopup)
+		{
+			return;
+		}
+		LevelsPopup.SetActive(true);
+	}
+
+	public void closeLevelsPopup()
+	{
+		if(!LevelsPopup)
+		{
+			return;
+		}
+		LevelsPopup.SetActive(false);
 	}
 }
