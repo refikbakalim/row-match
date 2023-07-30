@@ -93,7 +93,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   y: 0
+  type: 
   icon: {fileID: 7523917904438695755}
+  canMove: 1
 --- !u!114 &4223297669961984794
 MonoBehaviour:
   m_ObjectHideFlags: 0
