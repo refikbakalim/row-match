@@ -2316,6 +2316,7 @@ MonoBehaviour:
   rowPrefab: {fileID: 4334285982064632149, guid: 8719147608c9d7446aed09162d9ea488, type: 3}
   tilePrefab: {fileID: 3259725155286151656, guid: ca67b571d816e4941ab9f736d62b4d5c, type: 3}
   starImage: {fileID: 21300000, guid: 1554c51b5f8695e448fe80eded370d3b, type: 3}
+  pauseButton: {fileID: 6139369637169484698}
   completePopup: {fileID: 1192600108}
   completeScoreText: {fileID: 1192600107}
   highestScoreText: {fileID: 59000832}

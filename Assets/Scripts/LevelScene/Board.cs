@@ -31,6 +31,8 @@ public sealed class Board : MonoBehaviour
 	public GameObject tilePrefab;
 	public Sprite starImage;
 
+	public GameObject pauseButton;
+
 	public GameObject completePopup;
 	[SerializeField] private TMPro.TextMeshProUGUI completeScoreText;
 
@@ -149,6 +151,8 @@ public sealed class Board : MonoBehaviour
 
 	private void EndGame()
 	{
+		pauseButton.GetComponent<Button>().interactable = false; // Disable pause button
+		
 		if (ScoreCounter.Instance.Score > highScore) // Check if endscore is a new highscore
 		{
 			// If it is, save it to PlayerPrefs and StaticData
