@@ -2363,10 +2363,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-  m_Left: 35
-  m_Right: 35
-  m_Top: 30
-  m_Bottom: 35
+    m_Left: 35
+    m_Right: 35
+    m_Top: 30
+    m_Bottom: 35
   m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
