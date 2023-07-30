@@ -25,9 +25,10 @@ public class LevelCreator : MonoBehaviour
 	private GameObject levelObject;
 
 	private float levelPrefabHeight;
-	private int initialLevelCount;
+	private int downloadedLevelCount;
 	private int levelCount;
 	private const int maxLevelCount = 25;
+	private const int downloadableLevelCount = 15;
 	private string levelsPath = "Assets/Resources/Levels";
 
 	private bool isLevelUnlocked = false;
@@ -37,16 +38,12 @@ public class LevelCreator : MonoBehaviour
 
 	void Start()
 	{
-		// count the txt files in Resources/Level
-		// first 10 offline levels stored in Resources folder
-		initialLevelCount = Directory.EnumerateFiles(levelsPath, "RM_*.txt").Count();
-
 		// count the files in persistentPath
 		// downloaded levels stored in persistentDataPath
-		initialLevelCount += Directory.EnumerateFiles(Application.persistentDataPath, "RM_*").Count();
+		downloadedLevelCount += Directory.EnumerateFiles(Application.persistentDataPath, "RM_*").Count();
 
-		// If there are less than 25 levels, download levels from urls
-		if (initialLevelCount < maxLevelCount) StartCoroutine(downloadLevels());
+		// If there are less than 15 downloaded levels, download levels from urls
+		if (downloadedLevelCount < downloadableLevelCount) StartCoroutine(downloadLevels());
 
 		highscores = new int[maxLevelCount];
 
