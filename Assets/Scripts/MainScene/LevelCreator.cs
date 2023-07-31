@@ -29,7 +29,6 @@ public class LevelCreator : MonoBehaviour
 	private int levelCount;
 	private const int maxLevelCount = 25;
 	private const int downloadableLevelCount = 15;
-	private string levelsPath = "Assets/Resources/Levels";
 
 	private bool isLevelUnlocked = false;
 	public Sprite lockedSprite;
