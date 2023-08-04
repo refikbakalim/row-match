@@ -240,6 +240,8 @@ public sealed class Board : MonoBehaviour
 	private async void CompleteRow(Tile tile)
 	{
 		var connectedTiles = tile.GetRowConnectedTiles(); // Get the tile's whole row
+		
+		ScoreCounter.Instance.Score += tile.Item.value * connectedTiles.Count; // Add this row's score to score counter
 
 		// Create animation for row completion
 		// First deflate all tiles, then inflate them with star image
@@ -254,8 +256,6 @@ public sealed class Board : MonoBehaviour
 		}
 		await deflateSequence.Play().AsyncWaitForCompletion();
 		await inflateSequence.Play().AsyncWaitForCompletion();
-
-		ScoreCounter.Instance.Score += tile.Item.value * connectedTiles.Count; // Add this row's score to score counter
 	}
 
 	private bool isDeadlocked()
